@@ -1,0 +1,674 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7426C099-438D-40FE-AA70-3029CF93A757}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>seg_trabajo</RootNamespace>
+    <AssemblyName>seg_trabajo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>Z:\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\Eurollssvr\vsai\seg\</InstallUrl>
+    <ApplicationRevision>56</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6918461C068FAD19A15BC8D6140F0C5312BF6650</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>descarga.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.12.0.4518.1014\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transitions">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ayuda\ayuda_seg_trabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ayuda\ayuda_seg_trabajo.Designer.cs">
+      <DependentUpon>ayuda_seg_trabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ayuda\respaldo_de_DB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ayuda\respaldo_de_DB.Designer.cs">
+      <DependentUpon>respaldo_de_DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clases-funciones\Conexion.cs" />
+    <Compile Include="clases-funciones\Importar.cs" />
+    <Compile Include="clientes\cli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientes\cli.designer.cs">
+      <DependentUpon>cli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\DataSetclijobs.cs">
+      <DependentUpon>DataSetclijobs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\DataSetclijobs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetclijobs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\DataSetdimen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetdimen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datasets\DataSetorden.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetorden.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ejemplo_copia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ejemplo_copia.Designer.cs">
+      <DependentUpon>ejemplo_copia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inicio\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inicio\FormLogin.designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inicio\menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inicio\menu.designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Molino\DataSetCategorias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCategorias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Molino\Molino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Molino\Molino.Designer.cs">
+      <DependentUpon>Molino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\Control_salidas\control_sal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\Control_salidas\control_sal.Designer.cs">
+      <DependentUpon>control_sal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\Control_salidas\DataSetControl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetControl.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\Control_salidas\DataSetpzas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetpzas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\Control_salidas\imp_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\Control_salidas\imp_control.Designer.cs">
+      <DependentUpon>imp_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\actualizar_trabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\actualizar_trabajo.Designer.cs">
+      <DependentUpon>actualizar_trabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\act_orden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\act_orden.Designer.cs">
+      <DependentUpon>act_orden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\capa_segtrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\capa_segtrabajo.Designer.cs">
+      <DependentUpon>capa_segtrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\consultar_activos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\consultar_activos.Designer.cs">
+      <DependentUpon>consultar_activos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\dimensiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\dimensiones.Designer.cs">
+      <DependentUpon>dimensiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\imp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\imp.Designer.cs">
+      <DependentUpon>imp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\impn_trabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\impn_trabajo.designer.cs">
+      <DependentUpon>impn_trabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\Importar_excel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\Importar_excel.Designer.cs">
+      <DependentUpon>Importar_excel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\nuevo_trabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\nuevo_trabajo.designer.cs">
+      <DependentUpon>nuevo_trabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\participacion_usu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\participacion_usu.Designer.cs">
+      <DependentUpon>participacion_usu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\segTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\ntrabajo\segTrabajo.Designer.cs">
+      <DependentUpon>segTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\Proveedores\prov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\Proveedores\prov.Designer.cs">
+      <DependentUpon>prov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\tolerancias\Form_tolerancias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\tolerancias\Form_tolerancias.Designer.cs">
+      <DependentUpon>Form_tolerancias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones\usuarios\control_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operaciones\usuarios\control_usuarios.Designer.cs">
+      <DependentUpon>control_usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportes\dimensionado\impdimen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\dimensionado\impdimen.Designer.cs">
+      <DependentUpon>impdimen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\imp_hist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\imp_hist.Designer.cs">
+      <DependentUpon>imp_hist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\rep_historico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\rep_historico.Designer.cs">
+      <DependentUpon>rep_historico.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ayuda\ayuda_seg_trabajo.resx">
+      <DependentUpon>ayuda_seg_trabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ayuda\respaldo_de_DB.resx">
+      <DependentUpon>respaldo_de_DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientes\cli.resx">
+      <DependentUpon>cli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ejemplo_copia.resx">
+      <DependentUpon>ejemplo_copia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inicio\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inicio\menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Molino\Molino.resx">
+      <DependentUpon>Molino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\Control_salidas\control_sal.resx">
+      <DependentUpon>control_sal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\Control_salidas\imp_control.resx">
+      <DependentUpon>imp_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\Control_salidas\Report_control.rdlc" />
+    <EmbeddedResource Include="operaciones\ntrabajo\actualizar_trabajo.resx">
+      <DependentUpon>actualizar_trabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\ntrabajo\act_orden.resx">
+      <DependentUpon>act_orden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\ntrabajo\capa_segtrabajo.resx">
+      <DependentUpon>capa_segtrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\ntrabajo\consultar_activos.resx">
+      <DependentUpon>consultar_activos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\ntrabajo\dimensiones.resx">
+      <DependentUpon>dimensiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\ntrabajo\imp.resx">
+      <DependentUpon>imp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\ntrabajo\impn_trabajo.resx">
+      <DependentUpon>impn_trabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\ntrabajo\Importar_excel.resx">
+      <DependentUpon>Importar_excel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\ntrabajo\nuevo_trabajo.resx">
+      <DependentUpon>nuevo_trabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\ntrabajo\participacion_usu.resx">
+      <DependentUpon>participacion_usu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\ntrabajo\segTrabajo.resx">
+      <DependentUpon>segTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\Proveedores\prov.resx">
+      <DependentUpon>prov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\tolerancias\Form_tolerancias.resx">
+      <DependentUpon>Form_tolerancias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones\usuarios\control_usuarios.resx">
+      <DependentUpon>control_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reportes\dimensionado\impdimen.resx">
+      <DependentUpon>impdimen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\dimensionado\Reportdimen.rdlc" />
+    <EmbeddedResource Include="reportes\imp_hist.resx">
+      <DependentUpon>imp_hist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\Reportorden.rdlc" />
+    <EmbeddedResource Include="reportes\Report_hist.rdlc" />
+    <EmbeddedResource Include="reportes\rep_historico.resx">
+      <DependentUpon>rep_historico.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="datasets\DataSetclijobs.xsc">
+      <DependentUpon>DataSetclijobs.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\DataSetclijobs.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetclijobs.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datasets\DataSetclijobs.xss">
+      <DependentUpon>DataSetclijobs.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\DataSetdimen.xsc">
+      <DependentUpon>DataSetdimen.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\DataSetdimen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetdimen.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datasets\DataSetdimen.xss">
+      <DependentUpon>DataSetdimen.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\DataSetorden.xsc">
+      <DependentUpon>DataSetorden.xsd</DependentUpon>
+    </None>
+    <None Include="datasets\DataSetorden.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetorden.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datasets\DataSetorden.xss">
+      <DependentUpon>DataSetorden.xsd</DependentUpon>
+    </None>
+    <None Include="Molino\DataSetCategorias.xsc">
+      <DependentUpon>DataSetCategorias.xsd</DependentUpon>
+    </None>
+    <None Include="Molino\DataSetCategorias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCategorias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Molino\DataSetCategorias.xss">
+      <DependentUpon>DataSetCategorias.xsd</DependentUpon>
+    </None>
+    <None Include="operaciones\Control_salidas\DataSetControl.xsc">
+      <DependentUpon>DataSetControl.xsd</DependentUpon>
+    </None>
+    <None Include="operaciones\Control_salidas\DataSetControl.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetControl.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="operaciones\Control_salidas\DataSetControl.xss">
+      <DependentUpon>DataSetControl.xsd</DependentUpon>
+    </None>
+    <None Include="operaciones\Control_salidas\DataSetpzas.xsc">
+      <DependentUpon>DataSetpzas.xsd</DependentUpon>
+    </None>
+    <None Include="operaciones\Control_salidas\DataSetpzas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetpzas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="operaciones\Control_salidas\DataSetpzas.xss">
+      <DependentUpon>DataSetpzas.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar-flecha.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar-flecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="de\Microsoft.ReportViewer.WinForms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\Microsoft.ReportViewer.WinForms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\Microsoft.ReportViewer.WinForms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="it\Microsoft.ReportViewer.WinForms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\Microsoft.ReportViewer.WinForms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ko\Microsoft.ReportViewer.WinForms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="pt\Microsoft.ReportViewer.WinForms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\Microsoft.ReportViewer.WinForms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CHS\Microsoft.ReportViewer.WinForms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CHT\Microsoft.ReportViewer.WinForms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="descarga.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
